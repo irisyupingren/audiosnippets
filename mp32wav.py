@@ -1,9 +1,12 @@
 import os, glob, eyed3, ntpath, shutil
 import scipy.io.wavfile as wavfile
 
+# remember to "brew install libav" in terminal beforehand
+
 def convertDirMP3ToWav(dirName, Fs, nC, useMp3TagsAsName = False):
 	'''
-	This function converts the MP3 files stored in a folder to WAV. If required, the output names of the WAV files are based on MP3 tags, otherwise the same names are used.
+	Referred to the PyAudioAnalysis project on Github
+	This function converts the MP3 files stored in a folder to WAV. 
 	ARGUMENTS:
 	 - dirName:		the path of the folder where the MP3s are stored
 	 - Fs:			the sampling rate of the generated WAV files
